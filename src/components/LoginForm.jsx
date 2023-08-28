@@ -29,7 +29,7 @@ function LoginForm() {
         toast.error(res.data.body.message);
       }
     } catch (err) {
-      toast.error(err.res.data.body.message);
+      toast.error(err.message);
     }
   };
 
