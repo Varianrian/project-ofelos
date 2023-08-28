@@ -6,7 +6,7 @@ import Logo from "/public/images/logo.svg";
 
 function Navbar() {
   return (
-    <nav className="fixed w-full">
+    <nav className="fixed w-full z-10">
       <div className="flex w-full justify-between py-8 px-12 align-middle">
         <div>
           <Link href="/" className="flex">
