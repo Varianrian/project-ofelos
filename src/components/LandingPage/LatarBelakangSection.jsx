@@ -8,7 +8,7 @@ function LatarBelakangSection() {
       <div className="py-20 px-28">
         <div className="flex justify-center mb-24">
           <Link
-            href="/"
+            href="/login"
             className="p-4 rounded-2xl bg-[#D9D9D9] flex items-center"
           >
             <Image src="/images/logo.svg" alt="logo" width={65} height={74} />

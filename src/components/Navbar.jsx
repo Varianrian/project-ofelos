@@ -27,7 +27,7 @@ function Navbar() {
             <Link href="/">How it Works</Link>
           </li>
           <li className="bg-[#22467C] rounded-2xl font-bold text-white text-xl px-8 py-4">
-            <Link href="/">Log In</Link>
+            <Link href="/login">Log In</Link>
           </li>
           </ul>
       </div>

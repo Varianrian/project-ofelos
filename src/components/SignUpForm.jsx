@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
+import Link from "next/link";
 
 function SignUpForm() {
   const router = useRouter();
@@ -25,9 +26,11 @@ function SignUpForm() {
       return toast.error("Password does not match");
     }
 
+    const toastLoading = toast.loading("Loading...");
     try {
       const res = await axios.post("/api/users/signup", user);
 
+      toast.dismiss(toastLoading);
       if (res.data.body.status === "success") {
         toast.success("Sign Up Success");
         router.push("/login");
@@ -35,6 +38,7 @@ function SignUpForm() {
         toast.error(res.data.body.message);
       }
     } catch (err) {
+      toast.dismiss(toastLoading);
       toast.error(err.message);
     }
   };
@@ -107,9 +111,9 @@ function SignUpForm() {
           </form>
           <p className="text-sm mt-4 text-white">
             Already have an account?{" "}
-            <a href="/login" className="underline text-[#22467C] font-bold">
-              Login here
-            </a>
+            <Link href="/login" className="underline text-[#22467C] font-bold">
+              Register here
+            </Link>
           </p>
         </div>
       </div>

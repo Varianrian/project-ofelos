@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
+import Link from "next/link";
 
 function LoginForm() {
   const router = useRouter();
@@ -18,10 +19,11 @@ function LoginForm() {
   const handleUserSubmit = async (e) => {
     e.preventDefault();
 
+    const toastLoading = toast.loading("Loading...");
     try {
-      console.log(user);
       const res = await axios.post("/api/users/login", user);
 
+      toast.dismiss(toastLoading);
       if (res.data.body.status === "success") {
         toast.success("Login Success");
         router.push("/");
@@ -29,6 +31,7 @@ function LoginForm() {
         toast.error(res.data.body.message);
       }
     } catch (err) {
+      toast.dismiss(toastLoading);
       toast.error(err.message);
     }
   };
@@ -69,15 +72,15 @@ function LoginForm() {
               <input
                 type="submit"
                 value="Login"
-                className="mt-4 mx-auto block bg-[#22467C] text-white font-bold py-2 px-4 rounded-full"
+                className="mt-4 mx-auto block bg-[#22467C] text-white font-bold py-2 px-4 rounded-full hover:bg-[#0e1b24] hover:cursor-pointer"
               />
             </div>
           </form>
           <p className="text-sm mt-4 text-white">
             Doesn't have an account?{" "}
-            <a href="/signup" className="underline text-[#22467C] font-bold">
+            <Link href="/signup" className="underline text-[#22467C] font-bold">
               Register here
-            </a>
+            </Link>
           </p>
         </div>
         <div className="absolute bottom-5">
@@ -86,7 +89,6 @@ function LoginForm() {
           </p>
         </div>
       </div>
-      <Toaster />
     </>
   );
 }
