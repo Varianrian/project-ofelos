@@ -45,7 +45,7 @@ function SignUpForm() {
 
   return (
     <>
-      <div className="flex flex-col justify-center items-center h-screen pt-32">
+      <div className="flex flex-col justify-center w-fit mx-auto h-screen">
         <div className="p-8 bg-[#5F9AC4] rounded-[30px]">
           <h1 className="text-4xl font-bold text-center text-white">SIGN UP</h1>
           <form onSubmit={handleUserSubmit}>
@@ -112,12 +112,12 @@ function SignUpForm() {
           <p className="text-sm mt-4 text-white">
             Already have an account?{" "}
             <Link href="/login" className="underline text-[#22467C] font-bold">
-              Register here
+              Login Here
             </Link>
           </p>
         </div>
       </div>
-      <div className="mt-16 mb-8">
+      <div className=" mb-8">
         <p className="text-black text-xl font-normal text-center">
           Copyright 2023 - Tim Ofelos Larvasida Ball
         </p>
