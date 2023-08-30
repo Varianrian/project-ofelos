@@ -5,7 +5,7 @@ import React from "react";
 function LatarBelakangSection() {
   return (
     <>
-      <div className="py-20 px-28">
+      <div className="py-20 px-28" id="latar-belakang">
         <div className="flex justify-center mb-24">
           <Link
             href="/main"
