@@ -26,7 +26,7 @@ function LoginForm() {
       toast.dismiss(toastLoading);
       if (res.data.body.status === "success") {
         toast.success("Login Success");
-        router.push("/");
+        router.push("/main");
       } else {
         toast.error(res.data.body.message);
       }
@@ -38,7 +38,7 @@ function LoginForm() {
 
   return (
     <>
-      <div className="flex flex-col justify-center items-center h-screen">
+      <div className="flex flex-col justify-center w-fit mx-auto mt-16">
         <div className="p-8 bg-[#5F9AC4] rounded-[30px]">
           <h1 className="text-4xl font-bold text-center text-white">LOGIN</h1>
           <form onSubmit={handleUserSubmit}>
@@ -83,8 +83,8 @@ function LoginForm() {
             </Link>
           </p>
         </div>
-        <div className="absolute bottom-5">
-          <p className="text-black text-xl font-normal">
+        <div className="mt-24">
+          <p className="text-black text-xl font-normal text-center">
             Copyright 2023 - Tim Ofelos Larvasida Ball
           </p>
         </div>
