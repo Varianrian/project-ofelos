@@ -17,7 +17,7 @@ function NavbarLogout() {
       if (res.data.body.status === "success") {
         toast.dismiss(loading);
         toast.success("Logout Success");
-        router.push("/login");
+        router.push("/login"); 
       } else {
         toast.dismiss(loading);
         toast.error("Logout Failed");
