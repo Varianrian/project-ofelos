@@ -8,7 +8,6 @@ import {
   BiSolidRightArrow,
 } from "react-icons/bi";
 import useDirection from "@/hooks/useDirection";
-import useGetValue from "@/hooks/useGetValue";
 
 import { ref, child, onValue } from "firebase/database";
 import { firebase } from "@/firebase/firebase-config";
