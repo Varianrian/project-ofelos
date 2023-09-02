@@ -1,8 +1,9 @@
-"use client"
+"use client";
 
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
+import { useRouter } from "next/navigation";
 
 function LatarBelakangSection() {
   return (
@@ -38,13 +39,13 @@ function LatarBelakangSection() {
           </div>
         </div>
         <div className="flex justify-center mt-8">
-            <Link
-              href="/latar-belakang"
-              className="text-center px-8 py-4 bg-[#315D9E] text-white hover:cursor-pointer rounded-2xl text-xl font-bold"
-            >
-              More details
-            </Link>
-          </div>
+          <Link
+            href="/latar-belakang"
+            className="text-center px-8 py-4 bg-[#315D9E] text-white hover:cursor-pointer rounded-2xl text-xl font-bold"
+          >
+            More details
+          </Link>
+        </div>
       </div>
     </>
   );
