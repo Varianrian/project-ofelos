@@ -38,7 +38,7 @@ function LoginForm() {
 
   return (
     <>
-      <div className="flex flex-col justify-center w-fit mx-auto mt-16">
+      <div className="flex flex-col justify-center w-[80%] md:w-fit mx-auto mt-16">
         <div className="p-8 bg-[#5F9AC4] rounded-[30px]">
           <h1 className="text-4xl font-bold text-center text-white">LOGIN</h1>
           <form onSubmit={handleUserSubmit}>

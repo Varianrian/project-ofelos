@@ -3,17 +3,12 @@ import React from "react";
 function Page() {
   return (
     <>
-      <div className="pt-40 px-40 mb-14">
-        <div className="">
-          <h1
-            className="text-4xl font-bold text-white text-center italic"
-            style={{ fontFamily: "Inter" }}
-          >
-            LATAR BELAKANG
-          </h1>
-          <span className="block w-[158px] h-1 bg-white mx-auto my-4"></span>
+      <div className="pt-28 md:pt-40 mb-14">
+        <div className="mb-14">
+          <h2 className="text-white text-center text-xl sm:text-2xl md:text-4xl lg:text-6xl">LATAR BELAKANG</h2>
+          <span className="block w-[158px] h-1 bg-white mx-auto my-2 lg:my-4"></span>
         </div>
-        <div className="flex justify-center">
+        <div className="flex justify-center w-[80%] mx-auto">
           <div className="p-12 text-justify bg-white text-black rounded-lg">
             <p className="indent-10">
               Demam Berdarah Dengue (DBD) merupakan sebuah infeksi yang
